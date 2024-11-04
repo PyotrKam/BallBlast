@@ -5198,6 +5198,53 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5175162816479308183, guid: 7c31817e7f05b7c4baddb7ebe92c5430, type: 3}
   shootPoint: {fileID: 1745079175}
   fireRate: 0.3
+  projectileAmount: 0
+  projectileInterval: 0
+--- !u!1 &1209974566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1209974568}
+  - component: {fileID: 1209974567}
+  m_Layer: 0
+  m_Name: Level Bundary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1209974567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209974566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b17451461bf96746b50165a6130d17d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenResolution: {x: 1920, y: 1080}
+--- !u!4 &1209974568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209974566}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1351950742
 GameObject:
   m_ObjectHideFlags: 0
@@ -5440,6 +5487,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1525082699492750921, guid: d08421e83502f3545ad42d1236907e04, type: 3}
+      propertyPath: vehicleWidth
+      value: 1.21
+      objectReference: {fileID: 0}
     - target: {fileID: 4334789766752750005, guid: d08421e83502f3545ad42d1236907e04, type: 3}
       propertyPath: m_Name
       value: Cart
@@ -5502,3 +5553,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1823185852}
   - {fileID: 1799109937276771244}
+  - {fileID: 1209974568}
