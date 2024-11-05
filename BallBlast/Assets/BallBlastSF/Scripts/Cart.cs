@@ -5,7 +5,7 @@ using UnityEngine;
 public class Cart : MonoBehaviour
 {
     [Header("Movement")]
-    [SerializeField] private LevelBoundary levelBoundary;
+   
     [SerializeField] private float movementSpeed;
     [SerializeField] private float vehicleWidth;
 
