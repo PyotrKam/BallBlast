@@ -7,8 +7,13 @@ public class Turret : MonoBehaviour
     [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private Transform shootPoint;
     [SerializeField] private float fireRate;
-    [SerializeField] public int projectileAmount;
+    [SerializeField] private int damage;
+    [SerializeField] private int projectileAmount;
     [SerializeField] private float projectileInterval;
+
+    public int Damage => damage;
+    public int ProjectileAmount => projectileAmount;
+    public float FireRate => fireRate;
 
 
     private float timer;

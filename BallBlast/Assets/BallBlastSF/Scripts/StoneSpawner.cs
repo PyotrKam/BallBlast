@@ -13,6 +13,7 @@ public class StoneSpawner : MonoBehaviour
     [Header("Balance")]
     [SerializeField] private Turret turret;
     [SerializeField] public int amount;
+    
     [SerializeField][Range(0.0f, 1.0f)] private float minHitpointsPercentage;
     [SerializeField] public float maxHitpointsRate;
 
@@ -26,11 +27,12 @@ public class StoneSpawner : MonoBehaviour
     private int stoneMaxHitpoints;
     private int stoneMinHitpoints;
 
+
     private void Start()
     {
-        //int damagePerSecond = (int)((turret.Damage * turret.ProjectileAmount) * (1 / turret.FireRate));
+        int damagePerSecond = (int)((turret.Damage * turret.ProjectileAmount) * (1 / turret.FireRate));
 
-        //stoneMaxHitpoints = (int)(damagePerSecond * maxHitpointsRate);
+        stoneMaxHitpoints = (int)(damagePerSecond * maxHitpointsRate);
         stoneMinHitpoints = (int)(stoneMaxHitpoints * minHitpointsPercentage);
 
         timer = spawnRate;
@@ -60,8 +62,7 @@ public class StoneSpawner : MonoBehaviour
         Stone stone = Instantiate(stonePrefab, spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
         stone.SetSize((Stone.Size)Random.Range(1, 4));
         stone.maxHitPoints = Random.Range(stoneMinHitpoints, stoneMaxHitpoints + 1);
-
-        
+                
         Color randomColor = colors[Random.Range(0, colors.Length)];
         randomColor.a = 1f; 
         stone.SetColor(randomColor);
