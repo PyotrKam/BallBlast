@@ -238,12 +238,17 @@ MonoBehaviour:
   - {fileID: 2038849028}
   - {fileID: 2028038469}
   - {fileID: 217361777}
-  spawnRate: 10
+  spawnRate: 5
   turret: {fileID: 1799109937276771245}
   amount: 1
   minHitpointsPercentage: 0.5
-  maxHitpointsRate: 3
-  colors: []
+  maxHitpointsRate: 1
+  colors:
+  - {r: 0.02367392, g: 0.054148797, b: 0.7169812, a: 0}
+  - {r: 0.990566, g: 0.023362402, b: 0.023362402, a: 0}
+  - {r: 0.9472873, g: 1, b: 0, a: 0}
+  - {r: 0.023362402, g: 0.990566, b: 0.10769718, a: 0}
+  - {r: 0.94284916, g: 0.07075471, b: 1, a: 0}
   Completed:
     m_PersistentCalls:
       m_Calls: []
