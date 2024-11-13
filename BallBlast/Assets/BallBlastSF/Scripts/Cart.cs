@@ -14,16 +14,20 @@ public class Cart : MonoBehaviour
     [SerializeField] private Transform[] wheels;
     [SerializeField] private float wheelRadius;
 
+    [SerializeField] private TMPro.TextMeshProUGUI coinCounterText;
+
     [HideInInspector] public UnityEvent CollisionStone;
 
     private Vector3 movementTarget;
     private float deltaMovement;
     private float lastPositionX;
+    private int coinsCollected = 0;
 
 
     private void Start()
     {
         movementTarget = transform.position;
+        UpdateCoinCounter();
     }
 
     private void Update()
@@ -41,6 +45,12 @@ public class Cart : MonoBehaviour
             CollisionStone.Invoke();
         }
 
+        Coin coin = collision.GetComponent<Coin>();
+        if (coin != null)
+        {
+            CollectCoin();
+            Destroy(coin.gameObject);
+        }
        
     }
 
@@ -54,7 +64,7 @@ public class Cart : MonoBehaviour
         deltaMovement = transform.position.x - lastPositionX;
     }
 
-
+    
 
     public void SetMovementTarget(Vector3 target)
     {
@@ -84,6 +94,28 @@ public class Cart : MonoBehaviour
         if (movTarget.x > rightBorder) movTarget.x = rightBorder;
 
         return movTarget;
+    }
+
+    public void CollectCoin()
+    {
+        coinsCollected++;
+        UpdateCoinCounter();
+    }
+
+    private void UpdateCoinCounter()
+    {
+        coinCounterText.text = coinsCollected.ToString();
+    }
+
+    public void SetCoins(int coins)
+    {
+        coinsCollected = coins;
+        UpdateCoinCounter();
+    }
+
+    public int GetCoins()
+    {
+        return coinsCollected;
     }
 
 

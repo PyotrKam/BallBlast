@@ -238,9 +238,9 @@ MonoBehaviour:
   - {fileID: 2038849028}
   - {fileID: 2028038469}
   - {fileID: 217361777}
-  spawnRate: 5
+  spawnRate: 2
   turret: {fileID: 1799109937276771245}
-  amount: 1
+  amount: 2
   minHitpointsPercentage: 0.5
   maxHitpointsRate: 1
   colors:
@@ -6456,6 +6456,10 @@ PrefabInstance:
       propertyPath: vehicleWidth
       value: 1.21
       objectReference: {fileID: 0}
+    - target: {fileID: 1525082699492750921, guid: d08421e83502f3545ad42d1236907e04, type: 3}
+      propertyPath: coinCounterText
+      value: 
+      objectReference: {fileID: 804142148}
     - target: {fileID: 4334789766752750005, guid: d08421e83502f3545ad42d1236907e04, type: 3}
       propertyPath: m_Name
       value: Cart

@@ -21,7 +21,7 @@ public class Coin : MonoBehaviour
 
         if (cart != null)
         {
-            //cart.CollectCoin();
+            cart.CollectCoin();
             Destroy(gameObject);
         }
 

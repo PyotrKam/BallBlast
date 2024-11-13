@@ -375,8 +375,8 @@ MonoBehaviour:
       m_Calls: []
   size: 3
   spawnUpForce: 3
-  coinPrefab: {fileID: 0}
-  coinDropChance: 0
+  coinPrefab: {fileID: 4371216826001338783, guid: 2253d87f484366f4f82c0b2f9e1d88c0, type: 3}
+  coinDropChance: 1
 --- !u!114 &7905270812884768797
 MonoBehaviour:
   m_ObjectHideFlags: 0
