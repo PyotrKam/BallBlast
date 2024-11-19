@@ -20,15 +20,15 @@ public class Stone : Destructible
 
     private StoneMovement movement;
     private SpriteRenderer spriteRenderer;
-    //private LevelManager levelManager;
-    //private ProgressPanel progressPanel;
+    private LevelManager levelManager;
+    private ProgressPanel progressPanel;
 
     private void Awake()
     {
         movement = GetComponent<StoneMovement>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        //levelManager = FindObjectOfType<LevelManager>();
-        //progressPanel = FindObjectOfType<ProgressPanel>();
+        levelManager = FindObjectOfType<LevelManager>();
+        progressPanel = FindObjectOfType<ProgressPanel>();
 
         Die.AddListener(OnStoneDestroyed);
 
@@ -52,9 +52,9 @@ public class Stone : Destructible
             SpawnStones();
         }
 
-        //levelManager.StoneDestroyed(); 
+        levelManager.StoneDestroyed(); 
         Destroy(gameObject);
-        //levelManager.CheckForRemainingStones(); 
+        levelManager.CheckForRemainingStones(); 
     }
 
     private void SpawnStones()
@@ -67,7 +67,7 @@ public class Stone : Destructible
             stone.movement.AddVerticalVelocity(spawnUpForce);
             stone.movement.SetHorizontalDirection((i % 2 * 2) - 1);
             stone.SetColor(spriteRenderer.color);
-            //levelManager.RegisterNewStone(); 
+            levelManager.RegisterNewStone(); 
         }
     }
 

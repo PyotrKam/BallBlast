@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour
     public GameObject passedPanel;
     public StoneSpawner stoneSpawner;
     public Cart cart;
-    //public ProgressPanel progressPanel;
+    public ProgressPanel progressPanel;
 
     
     public static int amount = 1; 
@@ -34,8 +34,8 @@ public class LevelManager : MonoBehaviour
         
         totalStones = stoneSpawner.amount;
         destroyedStones = 0;
-        //progressPanel.InitializeProgressBar(totalStones);
-        //progressPanel.UpdateLevelTexts();
+        progressPanel.InitializeProgressBar(totalStones);
+        progressPanel.UpdateLevelTexts();
     }
 
     public void StartGame()
@@ -119,12 +119,12 @@ public class LevelManager : MonoBehaviour
     public void RegisterNewStone()
     {
         totalStones++;
-        //progressPanel.AddToTotalStones(1);
+        progressPanel.AddToTotalStones(1);
     }
 
     public void StoneDestroyed()
     {
         destroyedStones++;
-        //progressPanel.StoneDestroyed();
+        progressPanel.StoneDestroyed();
     }
 }
